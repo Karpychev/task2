@@ -26,15 +26,15 @@ def position_relative_to_circle(circle_center, radius, point):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("Usage: python script.py <circle_file> <points_file>")
+        print("Usage: KarpychevAlexandrPython.txt circle.txt points.txt")
         sys.exit(1)
 
-    circle_file = sys.argv[1]
-    points_file = sys.argv[2]
+    circle.txt = sys.argv[1]
+    points.txt = sys.argv[2]
 
     # Чтение данных из файлов
-    circle_center, radius = read_circle_data(circle_file)
-    points = read_points_data(points_file)
+    circle.txt, radius = read_circle_data(circle.txt)
+    points.txt = read_points_data(points.txt)
 
     # Определение положения каждой точки относительно окружности
     results = [position_relative_to_circle(circle_center, radius, point) for point in points]
